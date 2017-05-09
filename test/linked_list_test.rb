@@ -52,4 +52,15 @@ class LinkedListTest < Minitest::Test
     assert_equal expected, actual
   end
 
+  def test_next_node_adds_next_node
+    l = LinkedList.new
+    l.append("doop")
+    l.append("deep")
+
+    expected = Node
+    actual = l.head.next_node
+
+    assert_equal expected, actual.class
+  end
+
 end
